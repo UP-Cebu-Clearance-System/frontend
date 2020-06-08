@@ -19,6 +19,11 @@ const Home = () => (
             {name: 'Date Graduated', value: 'July 2018'},
           ],
         }}
+        statuses={[
+          {office: 'College of Science Secretary', status: 'Passed', remarks: 'Very good'},
+          {office: 'College of Science Secretary', status: 'Passed', remarks: 'Very good'},
+          {office: 'College of Science Secretary', status: 'Passed', remarks: 'Very good'},
+        ]}
       />
       <RequestCard
         studentInfo={{

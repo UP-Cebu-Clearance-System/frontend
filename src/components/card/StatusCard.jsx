@@ -5,7 +5,7 @@ import Title from './elements/Title'
 import SubInfo from './elements/SubInfo'
 import Status from './elements/Status'
 
-const StatusCard = ({children, studentInfo}) => {
+const StatusCard = ({children, studentInfo, statuses}) => {
   const cardStyle = {
     mt: 3,
     borderRadius: 'default',
@@ -31,10 +31,9 @@ const StatusCard = ({children, studentInfo}) => {
           ))}
         </Flex>
       </Box>
-      <Status office="College of Science Secretary" status="Passed" remarks="Very good" />
-      <Status office="College of Science Secretary" status="Passed" remarks="Very good" />
-      <Status office="College of Science Secretary" status="Passed" remarks="Very good" />
-      <Status office="College of Science Secretary" status="Passed" remarks="Very good" />
+      {statuses.map((info) => (
+        <Status office={info.office} status={info.status} remarks={info.remarks} />
+      ))}
       {children !== null && children}
     </Card>
   )
@@ -47,6 +46,7 @@ StatusCard.defaultProps = {
 StatusCard.propTypes = {
   children: PropTypes.element,
   studentInfo: PropTypes.object,
+  statuses: PropTypes.arrayOf(PropTypes.object),
 }
 
 export default StatusCard;

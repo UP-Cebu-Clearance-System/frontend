@@ -1,5 +1,7 @@
 /** @jsx jsx */
 import {useState} from 'react'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faCheck, faTimes, faCaretDown, faCaretUp} from '@fortawesome/free-solid-svg-icons'
 import {Flex, Text, Box, Button, jsx} from 'theme-ui'
 import PropTypes from 'prop-types'
 
@@ -25,6 +27,11 @@ const Status = ({office, status, remarks}) => {
     flexWrap: 'wrap',
   }
 
+  const officeStyle = {
+    alignItems: 'center',
+    flexWrap: 'wrap',
+  }
+
   const boxStyle = {
     px: [3, 4, null, null],
     py: 1,
@@ -38,13 +45,21 @@ const Status = ({office, status, remarks}) => {
   return (
     <Box sx={boxStyle}>
       <Flex sx={flexStyle}>
-        <Box>
+        <Flex sx={officeStyle}>
+          <FontAwesomeIcon
+            icon={status === 'Passed' ? faCheck : faTimes}
+            style={{marginRight: '12px', color: status === 'Passed' ? '#86D88E' : '#DF6464'}}
+          />
           <Text sx={textStyle} as="p">
             {office} - {status}
           </Text>
-        </Box>
+        </Flex>
         <Box>
           <Button sx={buttonStyle} onClick={() => toggleRemarks(!remarksToggled)} as="p">
+            <FontAwesomeIcon
+              icon={!remarksToggled ? faCaretDown : faCaretUp}
+              style={{marginRight: '12px', color: '#8F8F8F'}}
+            />
             View Remarks
           </Button>
         </Box>
