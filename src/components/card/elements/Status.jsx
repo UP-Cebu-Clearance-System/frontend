@@ -2,23 +2,15 @@
 import {useState} from 'react'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faCheck, faTimes, faCaretDown, faCaretUp} from '@fortawesome/free-solid-svg-icons'
-import {Flex, Text, Box, Button, jsx} from 'theme-ui'
+import {Flex, Text, Box, jsx} from 'theme-ui'
 import PropTypes from 'prop-types'
+import CustomButton from './Button'
 
 const Status = ({office, status, remarks}) => {
   const [remarksToggled, toggleRemarks] = useState(false)
 
   const textStyle = {
     color: 'secondary',
-  }
-
-  const buttonStyle = {
-    background: 'none',
-    color: 'secondary',
-    cursor: 'pointer',
-    ':hover': {
-      color: 'primary',
-    },
   }
 
   const flexStyle = {
@@ -54,15 +46,11 @@ const Status = ({office, status, remarks}) => {
             {office} - {status}
           </Text>
         </Flex>
-        <Box>
-          <Button sx={buttonStyle} onClick={() => toggleRemarks(!remarksToggled)} as="p">
-            <FontAwesomeIcon
-              icon={!remarksToggled ? faCaretDown : faCaretUp}
-              style={{marginRight: '12px', color: '#8F8F8F'}}
-            />
-            View Remarks
-          </Button>
-        </Box>
+        <CustomButton
+          onClick={() => toggleRemarks(!remarksToggled)}
+          icon={!remarksToggled ? faCaretDown : faCaretUp}
+          text="View Remarks"
+        />
       </Flex>
       {remarksToggled && (
         <Box sx={remarksStyle}>
