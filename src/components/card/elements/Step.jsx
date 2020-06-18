@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faUserMinus, faTimes} from '@fortawesome/free-solid-svg-icons'
 import {Flex, Text, Box, Button, jsx} from 'theme-ui'
 import PropTypes from 'prop-types'
@@ -29,6 +28,7 @@ const Step = ({index, approvers}) => {
     },
     fontSize: '14px',
     px: 0,
+    opacity: '0.7',
   }
 
   const boxStyle = {
@@ -40,6 +40,7 @@ const Step = ({index, approvers}) => {
   const indexStyle = {
     color: 'secondary',
     fontSize: '12px',
+    opacity: '0.6',
   }
 
   return (
@@ -53,14 +54,18 @@ const Step = ({index, approvers}) => {
             <Text sx={textStyle} as="p">
               {approver.name}
             </Text>
-            <CustomButton onClick={() => {}} icon={faUserMinus} text="Remove Approver" />
+            <CustomButton onClick={() => {}} icon={faUserMinus}>
+              Remove Approver
+            </CustomButton>
           </Flex>
         ))}
         <Flex sx={flexStyle}>
           <Button sx={buttonStyle} onClick={() => {}}>
             + Add Concurrent Approver
           </Button>
-          <CustomButton onClick={() => {}} icon={faTimes} text="Remove Step" />
+          <CustomButton onClick={() => {}} icon={faTimes}>
+            Remove Step
+          </CustomButton>
         </Flex>
       </Box>
     </Box>

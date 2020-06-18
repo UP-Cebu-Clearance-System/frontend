@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import {Text, Button, Box, Card, jsx} from 'theme-ui'
+import ButtonComponent from '../Button'
 import Step from './elements/Step'
 
 const ModifyFlowCard = () => {
@@ -32,6 +33,7 @@ const ModifyFlowCard = () => {
       color: 'primary',
     },
     fontSize: '14px',
+    opacity: '0.7',
   }
 
   return (
@@ -66,9 +68,9 @@ const ModifyFlowCard = () => {
           </Button>
         </Box>
       </Card>
-      <Button variant="outline" my={4}>
+      <ButtonComponent mt={4} color="#8F8F8F">
         Publish
-      </Button>
+      </ButtonComponent>
     </div>
   )
 }

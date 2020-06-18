@@ -49,8 +49,9 @@ const Status = ({office, status, remarks}) => {
         <CustomButton
           onClick={() => toggleRemarks(!remarksToggled)}
           icon={!remarksToggled ? faCaretDown : faCaretUp}
-          text="View Remarks"
-        />
+        >
+          View Remarks
+        </CustomButton>
       </Flex>
       {remarksToggled && (
         <Box sx={remarksStyle}>

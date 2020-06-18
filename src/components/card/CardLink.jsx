@@ -2,7 +2,7 @@
 import {Link} from 'react-router-dom'
 import {Text, Box, jsx} from 'theme-ui'
 
-const FlowCard = () => {
+const CardLink = () => {
   const buttonStyle = {
     background: 'none',
     color: 'secondary',
@@ -29,6 +29,12 @@ const FlowCard = () => {
     fontSize: 2,
   }
 
+  const subinfoStyle = {
+    color: 'secondary',
+    fontSize: 1,
+    opacity: '0.5',
+  }
+
   const imageStyle = {
     width: '100%',
     height: '160px',
@@ -42,9 +48,12 @@ const FlowCard = () => {
         <Text sx={textStyle} as="p">
           Clearance
         </Text>
+        <Text sx={subinfoStyle} as="p">
+          100 Students
+        </Text>
       </Box>
     </Link>
   )
 }
 
-export default FlowCard
+export default CardLink

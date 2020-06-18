@@ -2,25 +2,24 @@
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {Button, jsx} from 'theme-ui'
 
-const CustomButton = ({icon, onClick, children}) => {
+const ButtonComponent = ({children, icon, color, mr, mt}) => {
   const buttonStyle = {
-    background: 'none',
-    color: 'secondary',
-    cursor: 'pointer',
-    ':hover': {
-      color: 'primary',
+    borderRadius: '100px',
+    color,
+    borderColor: color,
+    '&:hover': {
+      backgroundColor: color,
     },
-    fontWeight: 600,
   }
 
   const iconStyle = {marginRight: '12px', color: 'inherit'}
 
   return (
-    <Button sx={buttonStyle} onClick={onClick}>
+    <Button variant="outline" sx={buttonStyle} mr={mr} mt={mt}>
       {icon && <FontAwesomeIcon icon={icon} style={iconStyle} />}
       {children}
     </Button>
   )
 }
 
-export default CustomButton
+export default ButtonComponent

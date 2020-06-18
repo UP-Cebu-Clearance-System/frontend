@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import {Link, jsx} from 'theme-ui'
+import {Link} from 'react-router-dom'
+import {jsx} from 'theme-ui'
 
 const AddFlowCard = () => {
   const buttonStyle = {
@@ -19,6 +20,7 @@ const AddFlowCard = () => {
     alignItems: 'center',
     justifyContent: 'center',
     minHeight: '256px',
+    textDecoration: 'none',
   }
 
   return (
