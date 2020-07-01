@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container, Flex, Box} from 'theme-ui'
+import { Container, Flex, Box } from 'theme-ui'
 import Navigation from '../components/Navigation'
 import Breadcrumbs from '../components/Breadcrumbs'
 import Input from '../components/Input'
@@ -37,7 +37,7 @@ const Pending = () => {
               },
             ]}
           />
-          <Box sx={{width: '200px'}}>
+          <Box sx={{ width: '200px' }}>
             <Input placeholder="Search" id="search" type="text" />
           </Box>
         </Flex>
@@ -51,10 +51,10 @@ const Pending = () => {
             name: 'Oscar Vian Valles',
             type: 'Clearance',
             subInfo: [
-              {name: 'Student Number', value: '2018-0XXXX'},
-              {name: 'Program', value: 'BS Computer Science'},
-              {name: 'Last Sem Attended', value: '2nd Sem 2018'},
-              {name: 'Date Graduated', value: 'July 2018'},
+              { name: 'Student Number', value: '2018-0XXXX' },
+              { name: 'Program', value: 'BS Computer Science' },
+              { name: 'Last Sem Attended', value: '2nd Sem 2018' },
+              { name: 'Date Graduated', value: 'July 2018' },
             ],
           }}
         />
@@ -64,10 +64,10 @@ const Pending = () => {
             name: 'Oscar Vian Valles',
             type: 'Clearance',
             subInfo: [
-              {name: 'Student Number', value: '2018-0XXXX'},
-              {name: 'Program', value: 'BS Computer Science'},
-              {name: 'Last Sem Attended', value: '2nd Sem 2018'},
-              {name: 'Date Graduated', value: 'July 2018'},
+              { name: 'Student Number', value: '2018-0XXXX' },
+              { name: 'Program', value: 'BS Computer Science' },
+              { name: 'Last Sem Attended', value: '2nd Sem 2018' },
+              { name: 'Date Graduated', value: 'July 2018' },
             ],
           }}
         />
@@ -78,10 +78,10 @@ const Pending = () => {
             name: 'Oscar Vian Valles',
             type: 'Clearance',
             subInfo: [
-              {name: 'Student Number', value: '2018-0XXXX'},
-              {name: 'Program', value: 'BS Computer Science'},
-              {name: 'Last Sem Attended', value: '2nd Sem 2018'},
-              {name: 'Date Graduated', value: 'July 2018'},
+              { name: 'Student Number', value: '2018-0XXXX' },
+              { name: 'Program', value: 'BS Computer Science' },
+              { name: 'Last Sem Attended', value: '2nd Sem 2018' },
+              { name: 'Date Graduated', value: 'July 2018' },
             ],
           }}
         />

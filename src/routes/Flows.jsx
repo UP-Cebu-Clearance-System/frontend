@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container, Box} from 'theme-ui'
+import { Container, Box } from 'theme-ui'
 import Navigation from '../components/Navigation'
 import FlowCard from '../components/card/FlowCard'
 import AddFlowCard from '../components/card/AddFlowCard'
