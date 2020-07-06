@@ -7,7 +7,7 @@ import { useState } from 'react'
 
 // Components
 import { Flex, Card, Button, Box } from 'theme-ui'
-import { Title, SubInfo } from './components'
+import { Title, SubInfo } from '../components'
 import { TextArea } from 'components/Forms'
 import CustomButton from 'components/Button'
 

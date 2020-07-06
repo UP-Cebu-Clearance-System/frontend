@@ -1,5 +1,5 @@
-import pass from '../../static/images/pass.png'
-import fail from '../../static/images/fail.png'
+import pass from 'assets/images/pass.png'
+import fail from 'assets/images/fail.png'
 
 export const cardStyle = {
   borderRadius: 'default',

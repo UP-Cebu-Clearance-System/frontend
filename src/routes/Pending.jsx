@@ -7,7 +7,7 @@ import Breadcrumbs from 'components/Breadcrumbs'
 import { Input } from 'components/Forms'
 import { LinkCard, RequestCard } from 'components/Cards'
 
-const Pending = () => {
+function Pending() {
   const gridStyle = {
     display: 'grid',
     gridGap: 4,
