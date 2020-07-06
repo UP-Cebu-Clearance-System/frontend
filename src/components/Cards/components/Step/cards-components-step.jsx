@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 // Components
 import { Flex, Text, Box, Button } from 'theme-ui'
-import Button from './Button'
+import CustomButton from 'components/Button'
 
 // Icons
 import { faUserMinus, faTimes } from '@fortawesome/free-solid-svg-icons'
@@ -31,18 +31,18 @@ function Step({ index, approvers }) {
             <Text sx={textStyle} as="p">
               {approver.name}
             </Text>
-            <Button onClick={() => {}} icon={faUserMinus}>
+            <CustomButton onClick={() => {}} icon={faUserMinus}>
               Remove Approver
-            </Button>
+            </CustomButton>
           </Flex>
         ))}
         <Flex sx={flexStyle}>
           <Button sx={buttonStyle} onClick={() => {}}>
             + Add Concurrent Approver
           </Button>
-          <Button onClick={() => {}} icon={faTimes}>
+          <CustomButton onClick={() => {}} icon={faTimes}>
             Remove Step
-          </Button>
+          </CustomButton>
         </Flex>
       </Box>
     </Box>

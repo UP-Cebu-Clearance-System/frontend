@@ -1,10 +1,11 @@
 import React from 'react'
+
+// Components
 import { Container, Flex, Box } from 'theme-ui'
-import Navigation from '../components/Navigation'
-import Breadcrumbs from '../components/Breadcrumbs'
-import Input from '../components/Input'
-import RequestCard from '../components/card/RequestCard'
-import CardLink from '../components/card/CardLink'
+import Navigation from 'components/Navigation'
+import Breadcrumbs from 'components/Breadcrumbs'
+import { Input } from 'components/Forms'
+import { LinkCard, RequestCard } from 'components/Cards'
 
 const Pending = () => {
   const gridStyle = {
@@ -42,8 +43,8 @@ const Pending = () => {
           </Box>
         </Flex>
         <Box sx={gridStyle}>
-          <CardLink />
-          <CardLink />
+          <LinkCard />
+          <LinkCard />
         </Box>
         <RequestCard
           status="pass"

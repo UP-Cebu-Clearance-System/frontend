@@ -7,15 +7,12 @@ import { useState } from 'react'
 
 // Components
 import { Flex, Card, Button, Box } from 'theme-ui'
-import TextArea from '../TextArea'
-import Title from './elements/Title'
-import SubInfo from './elements/SubInfo'
-import Button from 'components/Button'
+import { Title, SubInfo } from './components'
+import { TextArea } from 'components/Forms'
+import CustomButton from 'components/Button'
 
 // Images
 import { faCheck, faBan } from '@fortawesome/free-solid-svg-icons'
-import pass from '../../static/images/pass.png'
-import fail from '../../static/images/fail.png'
 
 // Styles
 import {
@@ -30,7 +27,7 @@ function RequestCard({ children, studentInfo, status }) {
   const [isRequestCardToggled, toggleRequestCard] = useState(false)
 
   return (
-    <Card sx={status ? cardStyleWithBG : cardStyle}>
+    <Card sx={status ? cardStyleWithBG(status) : cardStyle}>
       <Button sx={buttonStyle} onClick={() => toggleRequestCard(!isRequestCardToggled)}>
         <Title name={studentInfo.name} type={studentInfo.type} />
         <Flex sx={flexStyle}>
@@ -44,12 +41,12 @@ function RequestCard({ children, studentInfo, status }) {
         <Box sx={boxStyle}>
           <TextArea label="Remarks (Optional)" />
           <Box mt={3}>
-            <Button icon={faCheck} color="#86D88E" mr={3}>
+            <CustomButton icon={faCheck} color="#86D88E" mr={3}>
               Pass
-            </Button>
-            <Button icon={faBan} color="#DF6464">
+            </CustomButton>
+            <CustomButton icon={faBan} color="#DF6464">
               Fail
-            </Button>
+            </CustomButton>
           </Box>
         </Box>
       )}
@@ -59,11 +56,13 @@ function RequestCard({ children, studentInfo, status }) {
 
 RequestCard.defaultProps = {
   children: null,
+  status: null,
 }
 
 RequestCard.propTypes = {
   children: PropTypes.element,
   studentInfo: PropTypes.object,
+  status: PropTypes.oneOf('pass', 'fail'),
 }
 
 export default RequestCard

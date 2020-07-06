@@ -4,9 +4,7 @@ import PropTypes from 'prop-types'
 
 // Components
 import { Flex, Card, Box } from 'theme-ui'
-import Title from './elements/Title'
-import SubInfo from './elements/SubInfo'
-import Status from './elements/Status'
+import { Title, SubInfo, Status } from '../components'
 
 // Styles
 import { cardStyle, titleStyle, flexStyle } from './cards-status-styles'

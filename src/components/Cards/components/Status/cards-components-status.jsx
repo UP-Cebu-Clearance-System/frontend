@@ -8,7 +8,7 @@ import { useState } from 'react'
 // Components
 import { Flex, Text, Box } from 'theme-ui'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Button from './Button'
+import Button from 'components/Button'
 
 // Icons
 import {
@@ -25,6 +25,7 @@ import {
   officeStyle,
   textStyle,
   remarksStyle,
+  buttonStyle,
 } from './cards-components-status-styles'
 
 function Status({ office, status, remarks }) {
@@ -48,6 +49,7 @@ function Status({ office, status, remarks }) {
         <Button
           onClick={() => toggleRemarks(!remarksToggled)}
           icon={!remarksToggled ? faCaretDown : faCaretUp}
+          sx={buttonStyle}
         >
           View Remarks
         </Button>

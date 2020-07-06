@@ -1,1 +1,1 @@
-export { default } from './cards-flow-styles'
+export { default } from './cards-flow'

@@ -22,3 +22,14 @@ export const boxStyle = {
 export const remarksStyle = {
   p: 2,
 }
+export const buttonStyle = {
+  border: 'none',
+  background: 'none',
+  color: 'secondary',
+  cursor: 'pointer',
+  ':hover': {
+    color: 'primary',
+    background: 'none',
+  },
+  fontWeight: 600,
+}

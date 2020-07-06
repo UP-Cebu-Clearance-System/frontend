@@ -5,7 +5,7 @@ import { jsx } from 'theme-ui'
 import { Link } from 'react-router-dom'
 
 // Styles
-import { buttonStyle } from './cards-add-flow'
+import { buttonStyle } from './cards-add-flow-styles'
 
 function AddFlowCard() {
   return (

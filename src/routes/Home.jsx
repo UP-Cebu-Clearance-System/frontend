@@ -1,7 +1,9 @@
 import React from 'react'
+
+// Components
 import { Container } from 'theme-ui'
-import Navigation from '../components/Navigation'
-import StatusCard from '../components/card/StatusCard'
+import Navigation from 'components/Navigation'
+import { StatusCard } from 'components/Cards'
 
 const Home = () => (
   <>

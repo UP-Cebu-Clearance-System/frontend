@@ -3,8 +3,8 @@ import { jsx } from 'theme-ui'
 
 // Components
 import { Text, Button, Box, Card } from 'theme-ui'
-import Button from '../Button'
-import Step from './elements/Step'
+import CustomButton from 'components/Button'
+import { Step } from '../components'
 
 // Styles
 import {
@@ -48,9 +48,9 @@ function ModifyFlowCard() {
           </Button>
         </Box>
       </Card>
-      <Button mt={4} color="#8F8F8F">
+      <CustomButton mt={4} color="#8F8F8F">
         Publish
-      </Button>
+      </CustomButton>
     </div>
   )
 }

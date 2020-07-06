@@ -1,15 +1,20 @@
+import pass from '../../static/images/pass.png'
+import fail from '../../static/images/fail.png'
+
 export const cardStyle = {
   borderRadius: 'default',
   boxShadow: 'default',
   mt: 3,
 }
 
-export const cardStyleWithBG = {
-  borderRadius: 'default',
-  boxShadow: 'default',
-  mt: 3,
-  background: `url(${status === 'pass' ? pass : fail})`,
-  backgroundRepeat: 'no-repeat',
+export const cardStyleWithBG = (status) => {
+  return {
+    borderRadius: 'default',
+    boxShadow: 'default',
+    mt: 3,
+    background: `url(${status === 'pass' ? pass : fail})`,
+    backgroundRepeat: 'no-repeat',
+  }
 }
 
 export const buttonStyle = {
