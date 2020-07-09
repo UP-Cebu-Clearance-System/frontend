@@ -10,6 +10,7 @@ import clearance from 'styles/clearance'
 import store from 'redux/store'
 
 const Login = lazy(() => import('./routes/Login'))
+const Signup = lazy(() => import('./routes/Signup'))
 const Home = lazy(() => import('./routes/Home'))
 const Flows = lazy(() => import('./routes/Flows'))
 const Pending = lazy(() => import('./routes/Pending'))
@@ -22,6 +23,7 @@ function App() {
           <Suspense fallback={<div>Loading...</div>}>
             <Switch>
               <Route exact path="/login" component={Login} />
+              <Route exact path="/signup" component={Signup} />
               <Route exact path="/home" component={Home} />
               <Route exact path="/admin" component={Flows} />
               <Route exact path="/office" component={Pending} />
